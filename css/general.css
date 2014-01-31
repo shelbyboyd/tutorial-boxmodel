@@ -1,10 +1,14 @@
 @charset "utf-8";
 
-@-moz-viewport { width: device-width; scale: 1; }
-@-ms-viewport { width: device-width; scale: 1; }
-@-o-viewport { width: device-width; scale: 1; }
-@-webkit-viewport { width: device-width; scale: 1; }
-@viewport { width: device-width; scale: 1; }
+
+/* control the size of the viewport */
+@-moz-viewport { width: device-width; scale: 1; }  /* For Firefox*/
+@-ms-viewport { width: device-width; scale: 1; }  /* For Internet Explorer*/
+@-o-viewport { width: device-width; scale: 1; }  /* For Opera */
+@-webkit-viewport { width: device-width; scale: 1; } /* For Safari and Chrome */
+@viewport { width: device-width; scale: 1; }   /* The W3C Standard */
+
+/* Adjust padding so it draws on the box interior */
 
 * {
 	-moz-box-sizing: border-box;
@@ -12,16 +16,21 @@
 	box-sizing: border-box;
 }
 
-html {
+html {    
+
+/* Control the zoom of the type on mobile */
+    
 	-moz-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 	text-size-adjust: 100%;
     
-    font-size: 100%;
+/* Controls the typography siza on mobile and desktop */
+    
+    font-size: 100%; /* 100% = 16px = 1rem*/
 }
 
-img {
+img {   /*images are responcive */
 	width: 100%;
-    display: block;
+    display: block;  
 }
