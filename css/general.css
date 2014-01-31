@@ -1,5 +1,24 @@
 @charset "utf-8";
 
+/* 
+
+Shorthand: 
+
+margin: 40px; refering to all four sides
+margin: 40px auto; top/bottom right/left 
+margin: 10px auto 0; top right/left bottom
+margin: 40px 30px 5px 10px; top right bottom left
+
+Start at top, then continue clockwise around the box
+
+Units of Measurement
+
+Width = % 
+Height = rem
+Type = rem
+Graphic = px (e.g. border "would be graphic")
+
+*/
 
 /* control the size of the viewport */
 @-moz-viewport { width: device-width; scale: 1; }  /* For Firefox*/
@@ -28,9 +47,80 @@ html {
 /* Controls the typography siza on mobile and desktop */
     
     font-size: 100%; /* 100% = 16px = 1rem*/
+    
+    font-family: Georgia, Times, serif;
 }
 
 img {   /*images are responcive */
 	width: 100%;
     display: block;  
+}
+
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.masthead {
+    background-color: maroon;
+    overflow: hidden; /* forces parent to wrap around its child */
+}
+
+.logo {
+    height: 4.5rem;
+    width: auto;
+    margin: .5rem 5%;
+    
+    /* float: right; */
+    /* margin: .5rem auto */
+}
+
+article {
+    margin: 0;
+    padding: 0 5%;
+    overflow: hidden;
+}
+
+h1 {
+    margin: 1.5rem 0;
+    font-size: 5rem;
+    line-height: 4.5rem;
+}
+
+h1 + p {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+p {
+    line-height: 1.5rem;
+    margin: 0 0 1.5rem;
+}
+
+figure {
+    margin: 0 auto 1.5; /*auto in case we want smaller */
+    width: 80%; /*size can be smaller than but not larger than 100% */
+}
+
+
+figcaption {
+    font-size: 0.75rem;
+    margin: .5rem 0 0;
+}
+
+footer {
+    background-color: brown;
+    overflow: hidden;
+}
+
+
+footer p {
+    font-size: .75rem;
+    margin: .5rem 5% 5rem;
+    color: white;
+}
+
+footer a {
+    color: white;
 }
